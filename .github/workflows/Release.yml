@@ -22,21 +22,3 @@ jobs:
           CHANGELOG_FILE: "CHANGELOG.md"
         with:
           args: build/*.zip
-
-name: Publish PowerShell Module
-
-on:
-  release:
-    types: [published]
-    branches:
-    - master
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Publish
-        shell: pwsh
-        run: |
-          Publish-Module -Path ./ -NuGetApiKey ${{ secrets.PSGALLERY_API_KEY }} -Verbose
