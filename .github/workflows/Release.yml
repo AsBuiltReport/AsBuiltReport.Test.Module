@@ -1,3 +1,5 @@
+name: Create Release
+
 on:
   push:
     tags:
@@ -5,14 +7,21 @@ on:
     branches:
     - master
 
-- name: Release
-      uses: docker://antonyurchenko/git-release:latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        RELEASE_NAME_PREFIX: "Release "
-        CHANGELOG_FILE: "CHANGELOG.md"
-      with:
-        args: build/*.zip
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Release
+        uses: docker://antonyurchenko/git-release:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NAME_PREFIX: "Release "
+          CHANGELOG_FILE: "CHANGELOG.md"
+        with:
+          args: build/*.zip
 
 name: Publish PowerShell Module
 
@@ -23,7 +32,7 @@ on:
     - master
 
 jobs:
-  publish-to-gallery:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
