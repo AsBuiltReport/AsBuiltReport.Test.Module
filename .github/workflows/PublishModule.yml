@@ -3,8 +3,6 @@ name: Publish Module
 on:
   release:
     types: [published]
-    branches:
-    - master
 
 jobs:
   build:
