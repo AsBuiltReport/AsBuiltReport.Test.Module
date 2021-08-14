@@ -1,13 +1,16 @@
 # :arrows_counterclockwise: Test Module As Built Report Changelog
 
-## [0.1.0] - YYYY-MM-DD
+## [0.1.5] - 2021-08-15
 
 ### Added
+* GitHub Release Workflow
 
 ### Changed
+* Module Version
 
 ### Fixed
-
+* Test module
 ### Removed
+* GitHub PS Module Publish Workflow
 
 

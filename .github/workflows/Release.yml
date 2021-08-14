@@ -1,8 +1,27 @@
-name: Publish PowerShell Module
+name: Release
+
+on:
+  push:
+    tags:
+    - "v[0-9]+.[0-9]+.[0-9]+"
+    branches:
+    - master
+
+- name: Release
+      uses: docker://antonyurchenko/git-release:latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        RELEASE_NAME_PREFIX: "Release "
+        CHANGELOG_FILE: "CHANGELOG.md"
+      with:
+        args: build/*.zip
+
 
 on:
   release:
     types: [published]
+    branches:
+    - master
 
 jobs:
   publish-to-gallery:
