@@ -1,8 +1,9 @@
 name: Publish Module
 
-on: release
-  branches:
-  - master
+on:
+  release:
+    branches:
+    - master
 
 jobs:
   build:
