@@ -6,7 +6,7 @@
 * GitHub Release Workflow
 
 ### Changed
-* Module Version
+* More testing
 
 ### Fixed
 * NOTHING!!
