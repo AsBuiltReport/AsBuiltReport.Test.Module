@@ -1,4 +1,4 @@
-name: Create Release
+name: Release & Publish
 on:
   push:
     tags:
@@ -6,7 +6,7 @@ on:
     branches:
     - master
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,3 +19,12 @@ jobs:
           CHANGELOG_FILE: "CHANGELOG.md"
         with:
           args: build/*.zip
+  publish:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish
+        shell: pwsh
+        run: |
+          Publish-Module -Path ./ -NuGetApiKey ${{ secrets.PSGALLERY_API_KEY }} -Verbose
