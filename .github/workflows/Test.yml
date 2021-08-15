@@ -1,14 +1,12 @@
 name: Test
-on:
-  push:
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+on: [push, pull_request]
+
 jobs:
-  build:
+  main_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: npm ci
-    - uses: nelonoel/branch-name@v1.0.1
-    # Use branch name for whatever purpose
-    - run: echo ${BRANCH_NAME}
+      - name: Git branch name
+        id: git-branch-name
+        uses: EthanSK/git-branch-name-action@v1
+      - name: Echo the branch name
+        run: echo "Branch name ${GIT_BRANCH_NAME}"
