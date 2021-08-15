@@ -1,8 +1,8 @@
 name: Release
 on:
   push:
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+    branches:
+      - master
 jobs:
   release:
     name: Create Release
