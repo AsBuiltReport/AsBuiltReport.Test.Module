@@ -1,6 +1,6 @@
 # :arrows_counterclockwise: Test Module As Built Report Changelog
 
-## [0.1.12] - 2021-08-15
+## [0.1.13] - 2021-08-15
 
 ### Added
 * GitHub Release Workflow
@@ -9,11 +9,7 @@
 * Module Version
 
 ### Fixed
-* Test module
-* blah blah blah
-* more blah blah
-* Over it!
-* This never ends
+* NOTHING!!
 ### Removed
 * GitHub PS Module Publish Workflow
 

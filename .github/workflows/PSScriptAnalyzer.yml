@@ -1,11 +1,11 @@
 name: PowerShell Script Analyzer
 on:
   push:
-    branches:
-      - '!master'
+    branches-ignore:
+      - master
   pull_request:
-    branches:
-      - '!master'
+    branches-ignore:
+      - master
 jobs:
   lint:
     name: PSScriptAnalyzer
