@@ -1,6 +1,6 @@
 # :arrows_counterclockwise: Test Module As Built Report Changelog
 
-## [0.1.22] - 2021-08-15
+## [0.1.23] - 2021-08-15
 
 ### Added
 * More shit workflows
