@@ -1,8 +1,14 @@
-name: PSScriptAnalyzer
-on: [push, pull_request]
+name: PowerShell Script Analyzer
+on:
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    branches-ignore:
+      - master
 jobs:
   lint:
-    name: Run PSScriptAnalyzer
+    name: PSScriptAnalyzer
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
