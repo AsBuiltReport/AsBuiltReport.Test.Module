@@ -1,4 +1,4 @@
-name: PSScriptAnalyzer
+name: PowerShell Script Analyzer
 on: [push, pull_request]
 jobs:
   lint:
