@@ -1,8 +1,6 @@
 name: Publish Module
 
-on:
-  release:
-    types: [published]
+on: release
 
 jobs:
   build:
