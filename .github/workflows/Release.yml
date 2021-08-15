@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   lint:
-    name: PSScriptAnalyzer
+    name: Run PowerShell Script Analyzer
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -25,12 +25,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Release
+      - name: Create Release
         uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           CHANGELOG_FILE: "CHANGELOG.md"
-          ALLOW_TAG_PREFIX: true
         with:
           args: build/*.zip
   publish:
@@ -38,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Publish
+      - name: Publish to PS Gallery
         shell: pwsh
         run: |
           Publish-Module -Path ./ -NuGetApiKey ${{ secrets.PSGALLERY_API_KEY }} -Verbose

@@ -8,7 +8,7 @@ on:
       - master
 jobs:
   lint:
-    name: PSScriptAnalyzer
+    name: Run PowerShell Script Analyzer
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
