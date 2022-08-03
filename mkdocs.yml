@@ -1,0 +1,46 @@
+site_name: AsBuiltReport.b.b
+site_author: Tim Carman
+site_description:
+repo_url: https://github.com/AsBuiltReport/AsBuiltReport.b.b
+theme:
+    name: material
+    logo: https://raw.githubusercontent.com/AsBuiltReport/AsBuiltReport/master/AsBuiltReport.png
+    favicon: https://raw.githubusercontent.com/AsBuiltReport/AsBuiltReport/master/AsBuiltReport.png
+    features:
+      - content.code.annotate
+    palette:
+      primary: amber
+    locale: en
+    highlightjs: true
+    icon:
+      repo: fontawesome/brands/github
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+nav:
+  - Home: index.md
+  - User Guide:
+    - System Requirements: user-guide/system-requirements.md
+    - Installation: user-guide/installation.md
+    - Configuration: user-guide/configuration.md
+    - Custom Styling: user-guide/styling.md
+    - Examples: user-guide/examples.md
+    - Troubleshooting: user-guide/troubleshooting.md
+  - About:
+    - Contributing: about/contributing.md
+    - Acknowledgements: about/acknowledgements.md
