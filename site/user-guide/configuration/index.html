@@ -1,0 +1,1362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Tim Carman">
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/AsBuiltReport/AsBuiltReport/master/AsBuiltReport.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Configuration - AsBuiltReport.b.b</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffc105">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="amber" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#report" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AsBuiltReport.b.b" class="md-header__button md-logo" aria-label="AsBuiltReport.b.b" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/AsBuiltReport/AsBuiltReport/master/AsBuiltReport.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AsBuiltReport.b.b
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AsBuiltReport/AsBuiltReport.b.b" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AsBuiltReport.b.b" class="md-nav__button md-logo" aria-label="AsBuiltReport.b.b" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/AsBuiltReport/AsBuiltReport/master/AsBuiltReport.png" alt="logo">
+
+    </a>
+    AsBuiltReport.b.b
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AsBuiltReport/AsBuiltReport.b.b" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-requirements/" class="md-nav__link">
+        System Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    Report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infolevel" class="md-nav__link">
+    InfoLevel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthcheck" class="md-nav__link">
+    Healthcheck
+  </a>
+  
+    <nav class="md-nav" aria-label="Healthcheck">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vcenter" class="md-nav__link">
+    vCenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster" class="md-nav__link">
+    Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmhost" class="md-nav__link">
+    VMHost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsan" class="md-nav__link">
+    vSAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datastore" class="md-nav__link">
+    Datastore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dscluster" class="md-nav__link">
+    DSCluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vm" class="md-nav__link">
+    VM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styling/" class="md-nav__link">
+        Custom Styling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/acknowledgements/" class="md-nav__link">
+        Acknowledgements
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    Report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infolevel" class="md-nav__link">
+    InfoLevel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#healthcheck" class="md-nav__link">
+    Healthcheck
+  </a>
+  
+    <nav class="md-nav" aria-label="Healthcheck">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vcenter" class="md-nav__link">
+    vCenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster" class="md-nav__link">
+    Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmhost" class="md-nav__link">
+    VMHost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsan" class="md-nav__link">
+    vSAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datastore" class="md-nav__link">
+    Datastore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dscluster" class="md-nav__link">
+    DSCluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vm" class="md-nav__link">
+    VM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/AsBuiltReport/AsBuiltReport.b.b/edit/master/docs/user-guide/configuration.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>Configuration</h1>
+
+<p>The vSphere As Built Report utilises a JSON file to allow configuration of report information, options, detail and healthchecks.</p>
+<p>A vSphere report configuration file can be generated by executing the following command;
+<div class="highlight"><span class="filename">PowerShell</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">New-AsBuiltReportConfig</span> <span class="n">-Report</span> <span class="n">VMware</span><span class="p">.</span><span class="n">vSphere</span> <span class="n">-FolderPath</span> <span class="p">&lt;</span><span class="n">User</span> <span class="n">specified</span> <span class="n">folder</span><span class="p">&gt;</span> <span class="n">-Filename</span> <span class="p">&lt;</span><span class="n">Optional</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Executing this command will copy the default vSphere report JSON configuration to a user specified folder.</p>
+<p>All report settings can then be configured via the JSON file.</p>
+<p>The following provides information of how to configure each schema within the report's JSON file.</p>
+<h4 id="report">Report</h4>
+<p>The <strong>Report</strong> schema provides configuration of the vSphere report information.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>User defined</td>
+<td>VMware vSphere As Built Report</td>
+<td>The name of the As Built Report</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>User defined</td>
+<td>1.0</td>
+<td>The report version</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>User defined</td>
+<td>Released</td>
+<td>The report release status</td>
+</tr>
+<tr>
+<td>ShowCoverPageImage</td>
+<td>true / false</td>
+<td>true</td>
+<td>Toggle to enable/disable the display of the cover page image</td>
+</tr>
+<tr>
+<td>ShowTableOfContents</td>
+<td>true / false</td>
+<td>true</td>
+<td>Toggle to enable/disable table of contents</td>
+</tr>
+<tr>
+<td>ShowHeaderFooter</td>
+<td>true / false</td>
+<td>true</td>
+<td>Toggle to enable/disable document headers &amp; footers</td>
+</tr>
+<tr>
+<td>ShowTableCaptions</td>
+<td>true / false</td>
+<td>true</td>
+<td>Toggle to enable/disable table captions/numbering</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options">Options</h4>
+<p>The <strong>Options</strong> schema allows certain options within the report to be toggled on or off.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ShowLicenseKeys</td>
+<td>true / false</td>
+<td>false</td>
+<td>Toggle to mask/unmask vSphere license keys<br><br> <strong>Masked License Key</strong><br>*****-*****-*****-56YDM-AS12K<br><br> <strong>Unmasked License Key</strong><br>AKLU4-PFG8M-W2D8J-56YDM-AS12K</td>
+</tr>
+<tr>
+<td>ShowVMSnapshots</td>
+<td>true / false</td>
+<td>true</td>
+<td>Toggle to enable/disable reporting of VM snapshots</td>
+</tr>
+<tr>
+<td>ApplianceBackupJobs</td>
+<td>User defined</td>
+<td>7</td>
+<td>The number of vCenter Server appliance backup jobs to display</td>
+</tr>
+</tbody>
+</table>
+<h4 id="filter">Filter</h4>
+<p>The <strong>Filter</strong> schema is used to filter information for specifically named vSphere clusters. The generated as-built will only provide information which are specific to these named clusters.</p>
+<div class="highlight"><span class="filename">Report on all clusters</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;Filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;Cluster&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Report on specific named clusters, Prod-Cluster and Test-Cluster</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;Filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;Cluster&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Prod-Cluster&quot;</span><span class="p">,</span><span class="s2">&quot;Test-Cluster&quot;</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="infolevel">InfoLevel</h4>
+<p>The <strong>InfoLevel</strong> schema allows configuration of each section of the report at a granular level. The following sections can be set.</p>
+<p>There are 6 levels (0-5) of detail granularity for each section as follows;</p>
+<table>
+<thead>
+<tr>
+<th align="center">Setting</th>
+<th>InfoLevel</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td>Disabled</td>
+<td>Does not collect or display any information</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td>Enabled / Summary</td>
+<td>Provides summarised information for a collection of objects</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>Adv Summary</td>
+<td>Provides condensed, detailed information for a collection of objects</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Detailed</td>
+<td>Provides detailed information for individual objects</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>Adv Detailed</td>
+<td>Provides detailed information for individual objects, as well as information for associated objects (Hosts, Clusters, Datastores, VMs etc)</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>Comprehensive</td>
+<td>Provides comprehensive information for individual objects, such as advanced configuration settings</td>
+</tr>
+</tbody>
+</table>
+<p>The table below outlines the default and maximum <strong>InfoLevel</strong> settings for each section.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th align="center">Default Setting</th>
+<th align="center">Maximum Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vCenter</td>
+<td align="center">3</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>Cluster</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>ResourcePool</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>VMHost</td>
+<td align="center">3</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>Network</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>vSAN</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>Datastore</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>DSCluster</td>
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>VM</td>
+<td align="center">2</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>VUM</td>
+<td align="center">3</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
+<h4 id="healthcheck">Healthcheck</h4>
+<p>The <strong>Healthcheck</strong> schema is used to toggle health checks on or off.</p>
+<h5 id="vcenter">vCenter</h5>
+<p>The <strong>vCenter</strong> schema is used to configure health checks for vCenter Server.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mail</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights mail settings which are not configured</td>
+<td><img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" /> Not Configured</td>
+</tr>
+<tr>
+<td>Licensing</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights product evaluation licenses</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Product evaluation license in use</td>
+</tr>
+<tr>
+<td>Alarms</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vCenter Server alarms which are disabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Alarm disabled</td>
+</tr>
+</tbody>
+</table>
+<h5 id="cluster">Cluster</h5>
+<p>The <strong>Cluster</strong> schema is used to configure health checks for vSphere Clusters.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HAEnabled</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have vSphere HA enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere HA disabled</td>
+</tr>
+<tr>
+<td>HAAdmissionControl</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have vSphere HA Admission Control enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere HA Admission Control disabled</td>
+</tr>
+<tr>
+<td>HostFailureResponse</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which have vSphere HA Failure Response set to disabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere HA Host Failure Response disabled</td>
+</tr>
+<tr>
+<td>HostMonitoring</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have vSphere HA Host Monitoring enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere HA Host Monitoring disabled</td>
+</tr>
+<tr>
+<td>DatastoreOnPDL</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have Datastore on PDL enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere HA Datastore on PDL disabled</td>
+</tr>
+<tr>
+<td>DatastoreOnAPD</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have Datastore on APD enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere HA Datastore on APD disabled</td>
+</tr>
+<tr>
+<td>APDTimeOut</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have APDTimeOut enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> APDTimeOut disabled</td>
+</tr>
+<tr>
+<td>vmMonitoing</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have VM Monitoting enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> VM Monitoring disabled</td>
+</tr>
+<tr>
+<td>DRSEnabled</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have vSphere DRS enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere DRS disabled</td>
+</tr>
+<tr>
+<td>DRSAutomationLevelFullyAuto</td>
+<td>true / false</td>
+<td>true</td>
+<td>Checks the vSphere DRS Automation Level is set to 'Fully Automated'</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere DRS Automation Level not set to 'Fully Automated'</td>
+</tr>
+<tr>
+<td>PredictiveDRS</td>
+<td>true / false</td>
+<td>false</td>
+<td>Highlights vSphere Clusters which do not have Predictive DRS enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Predictive DRS disabled</td>
+</tr>
+<tr>
+<td>DRSVMHostRules</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights DRS VMHost rules which are disabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> DRS VMHost rule disabled</td>
+</tr>
+<tr>
+<td>DRSRules</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights DRS rules which are disabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> DRS rule disabled</td>
+</tr>
+<tr>
+<td>vSANEnabled</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have Virtual SAN enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Virtual SAN disabled</td>
+</tr>
+<tr>
+<td>EVCEnabled</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not have Enhanced vMotion Compatibility (EVC) enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> vSphere EVC disabled</td>
+</tr>
+<tr>
+<td>VUMCompliance</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights vSphere Clusters which do not comply with VMware Update Manager baselines</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Unknown<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  Not Compliant</td>
+</tr>
+</tbody>
+</table>
+<h5 id="vmhost">VMHost</h5>
+<p>The <strong>VMHost</strong> schema is used to configure health checks for VMHosts.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ConnectionState</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which are in maintenance mode or disconnected</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Maintenance<br>  <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  Disconnected</td>
+</tr>
+<tr>
+<td>HyperThreading</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which have HyperThreading disabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> HyperThreading disabled<br></td>
+</tr>
+<tr>
+<td>ScratchLocation</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which are configured with the default scratch location</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Scratch location is /tmp/scratch</td>
+</tr>
+<tr>
+<td>IPv6</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which do not have IPv6 enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> IPv6 disabled</td>
+</tr>
+<tr>
+<td>UpTimeDays</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts with uptime days greater than 9 months</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> 9 - 12 months<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  &gt;12 months</td>
+</tr>
+<tr>
+<td>Licensing</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which are using production evaluation licenses</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Product evaluation license in use</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights if the SSH service is enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> TSM / TSM-SSH service enabled</td>
+</tr>
+<tr>
+<td>ESXiShell</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights if the ESXi Shell service is enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> TSM / TSM-EsxiShell service enabled</td>
+</tr>
+<tr>
+<td>NTP</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights if the NTP service has stopped or is disabled on a VMHost</td>
+<td><img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  NTP service stopped / disabled</td>
+</tr>
+<tr>
+<td>StorageAdapter</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights storage adapters which are not 'Online'</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Storage adapter status is 'Unknown'<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  Storage adapter status is 'Offline'</td>
+</tr>
+<tr>
+<td>NetworkAdapter</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights physical network adapters which are not 'Connected'<br> Highlights physical network adapters which are 'Down'</td>
+<td><img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  Network adapter is 'Disconnected'<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  Network adapter is 'Down'</td>
+</tr>
+<tr>
+<td>LockdownMode</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which do not have Lockdown mode enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Lockdown Mode disabled<br></td>
+</tr>
+<tr>
+<td>VUMCompliance</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMHosts which are not compliant with VMware Update Manager software packages</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Unknown<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" />  Incompatible</td>
+</tr>
+</tbody>
+</table>
+<h5 id="vsan">vSAN</h5>
+<p>The <strong>vSAN</strong> schema is used to configure health checks for vSAN.</p>
+<table>
+<thead>
+<tr>
+<th>Schema</th>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="datastore">Datastore</h5>
+<p>The <strong>Datastore</strong> schema is used to configure health checks for Datastores.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapacityUtilization</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights datastores with storage capacity utilization over 75%</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> 75 - 90% utilized<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" /> &gt;90% utilized</td>
+</tr>
+</tbody>
+</table>
+<h5 id="dscluster">DSCluster</h5>
+<p>The <strong>DSCluster</strong> schema is used to configure health checks for Datastore Clusters.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CapacityUtilization</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights datastore clusters with storage capacity utilization over 75%</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> 75 - 90% utilized<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" /> &gt;90% utilized</td>
+</tr>
+<tr>
+<td>SDRSAutomationLevelFullyAuto</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights if the Datastore Cluster SDRS Automation Level is not set to 'Fully Automated'</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Storage DRS Automation Level not set to 'Fully Automated'</td>
+</tr>
+</tbody>
+</table>
+<h5 id="vm">VM</h5>
+<p>The <strong>VM</strong> schema is used to configure health checks for virtual machines.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Schema</th>
+<th>Setting</th>
+<th>Default</th>
+<th>Description</th>
+<th>Highlight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PowerState</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMs which are powered off</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> VM is powered off</td>
+</tr>
+<tr>
+<td>ConnectionState</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMs which are orphaned or inaccessible</td>
+<td><img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" /> VM is orphaned or inaccessible</td>
+</tr>
+<tr>
+<td>CpuHotAdd</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights virtual machines which have CPU Hot Add enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> CPU Hot Add enabled</td>
+</tr>
+<tr>
+<td>CpuHotRemove</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights virtual machines which have CPU Hot Remove enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> CPU Hot Remove enabled</td>
+</tr>
+<tr>
+<td>MemoryHotAdd</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMs which have Memory Hot Add enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Memory Hot Add enabled</td>
+</tr>
+<tr>
+<td>ChangeBlockTracking</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMs which do not have Change Block Tracking enabled</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> Change Block Tracking disabled</td>
+</tr>
+<tr>
+<td>SpbmPolicyCompliance</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights VMs which do not comply with storage based policies</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> VM storage based policy compliance is unknown<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" /> VM does not comply with storage based policies</td>
+</tr>
+<tr>
+<td>VMToolsStatus</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights Virtual Machines which do not have VM Tools installed, are out of date or are not running</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> VM Tools not installed, out of date or not running</td>
+</tr>
+<tr>
+<td>VMSnapshots</td>
+<td>true / false</td>
+<td>true</td>
+<td>Highlights Virtual Machines which have snapshots older than 7 days</td>
+<td><img alt="Warning" src="https://via.placeholder.com/15/FFF4C7/FFF4C7.png" /> VM Snapshot age &gt;= 7 days<br> <img alt="Critical" src="https://via.placeholder.com/15/FEDDD7/FEDDD7.png" /> VM Snapshot age &gt;= 14 days</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Installation
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../styling/" class="md-footer__link md-footer__link--next" aria-label="Next: Custom Styling" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Custom Styling
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
